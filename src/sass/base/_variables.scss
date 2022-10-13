@@ -1,0 +1,46 @@
+// decalre colors
+$primary-color:#ED2626;
+$hover-primary:#ff6d6d;
+$background-icon:#FF0000;
+$color-black:#000;
+$color-white:#fff;
+$color-secondary:#272424;
+$btn-parimary-hover:#FF0B0B;
+$color-light-secondary:#F8F8F8;
+
+
+
+// center element
+@mixin  center-elements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// media queries
+@mixin sm {
+    @media screen and (min-width: 500px) {
+        @content;
+    }   
+}
+@mixin md {
+    @media screen and (min-width: 600px) {
+        @content;
+    }   
+}
+@mixin lg {
+    @media screen and (min-width: 800px) {
+        @content;
+    }   
+}
+@mixin tablet {
+    @media screen and (min-width: 1000px) {
+        @content;
+    }   
+}
+
+@mixin laptop {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }   
+}

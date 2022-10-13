@@ -1,0 +1,85 @@
+.services-section{
+    padding: 10rem 0;
+    background-color: $color-light-secondary;
+    @include laptop{
+        padding: 10rem 0 5rem 0;
+    }
+    .services-container{
+        padding: 10rem 0;
+        &__card{
+            height: 50rem;
+            background-color: $color-white;
+            box-shadow: 1px 2px 14px -3px rgba(0,0,0,0.10);
+            -webkit-box-shadow: 1px 2px 14px -3px rgba(0,0,0,0.10);
+            -moz-box-shadow: 1px 2px 14px -3px rgba(0,0,0,0.10);
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            @include laptop{
+                display: flex;
+                margin-bottom: 5rem;
+                height: 40rem;
+                &:nth-child(even){
+                    flex-direction: row-reverse;
+                }
+            }
+            &--img{
+                height: 50%;
+                @include lg{
+                    height: 55%;
+                }
+                @include laptop{
+                    height: 100%;
+                    width: 40%;
+                }
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            &--content{
+                padding: 2rem;
+                @include laptop{
+                    width: 60%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    padding: 5rem;
+                }
+                h4{
+                    margin-bottom: 1rem;
+                    font-size: 2rem;
+                    @include laptop{
+                        font-size: 3.5rem;
+                        margin-bottom: 1rem;
+                    }
+                }
+                h6{
+                    margin-bottom: 2rem;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    @include laptop{
+                        margin-bottom: 2rem;
+                    }
+                    strong{
+                        color: $primary-color;
+                        margin-left: .5rem;
+                    }
+                }
+                p{
+                    color: $color-secondary;
+                    line-height: 1.5;
+                    margin-bottom: 2rem;
+                    @include laptop{
+                        font-size: 1.8rem;
+                        margin-bottom: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}

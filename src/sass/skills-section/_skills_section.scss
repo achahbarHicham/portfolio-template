@@ -1,0 +1,135 @@
+@import "../base/variables";
+.skills-section{
+    padding: 5rem 0;
+    .skills-title{
+        position: relative;
+        margin-bottom: 4rem;
+        @include lg(){
+            margin-bottom: 6rem;
+        }
+        .whatermark{
+            position: absolute;
+            font-size: 6rem;
+            font-weight: 800;
+            letter-spacing: 1rem;
+            text-transform: uppercase;
+            right: 0rem;
+            top: -2rem;
+            z-index: 0;
+            color: #F7F7F7;
+            @include md{
+                font-size: 8rem;
+                top: -3rem;
+            }
+            @include tablet{
+                font-size: 10rem;
+                top: -5rem;
+            }
+        }
+        h2{
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 99;
+            font-size: 3rem;
+            span{
+                color: $primary-color;
+            }
+        }
+        p{
+            line-height: 1.5;
+            color: $color-secondary;
+            position: relative;
+            z-index: 99;
+            font-weight: 400;
+            @include lg(){
+                margin-top: 2rem;
+                width: 50%;
+                line-height: 1.5;
+
+            }
+        }
+    
+    
+    }
+    .my-skills{
+        &__title{
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+        &__skills-container{
+            padding-top: 2rem;
+            @include tablet{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+                column-gap: 2rem;
+                row-gap: 3rem;
+            }
+            @include laptop{
+                grid-template-columns: 1fr 1fr 1fr;
+                row-gap: 5rem;
+                padding: 3rem 0 5rem 0;
+            }
+            &--skill-card{
+                &:not(&:first-child){
+                    margin-top: 3rem;
+                    @include tablet{
+                        margin-top: 0;
+                    }
+                }
+                .skill-card-labels{
+                    margin-bottom: 2rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    h6{
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                    }
+                }
+                .skill-card-progress{
+                    width: 100%;
+                    height: 1rem;
+                    background-color: #ededed;
+                    position: relative;
+                    border-radius: 100px;
+                    overflow: hidden;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        border-radius: 100px;
+                        
+                    }
+                    &.html::after{
+                        background-color: #8A3EF2;
+                        width: 95%;
+                    }
+                    &.javascript::after{
+                        background-color: #FCE42F;
+                        width: 90%;
+                    }
+                    &.sass::after{
+                        background-color: #F53737;
+                        width: 92%;
+                    }
+                    &.php:after{
+                        background-color: #D837F5;
+                        width: 75%;
+
+                    }
+                    &.react:after{
+                        background-color: #61DAFB;
+                        width: 95%;
+                    }
+                    &.wordpress::after{
+                        background-color: #4848EB;
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.footer{
+    padding: 1rem;
+    @include center-elements();
+    @include sm{
+        padding: 2rem;
+    }
+    @include tablet{
+        padding: 3rem;
+    }
+}

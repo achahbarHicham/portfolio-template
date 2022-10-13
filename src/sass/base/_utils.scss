@@ -1,0 +1,68 @@
+// container 
+.container{
+    margin: 0 auto;
+    max-width: 90%;
+    @include md(){
+        width: 80%;
+    }
+    @include lg(){
+        width: 90%;
+    }
+    @include laptop{
+        max-width: 1300px;
+    }
+}
+
+.mb-1{
+    margin-bottom: 1rem;
+}
+.mb-2{
+    margin-bottom: 2rem;
+}
+.mb-3{
+    margin-bottom: 3rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+
+button,input{
+    outline: none;
+    border: none;
+}
+
+
+
+.btn{
+    cursor: pointer;
+}
+
+.btn-primary{
+    background-color: $primary-color;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: inherit;
+    transition: all .3s ease;
+    cursor: pointer;
+    &:hover{
+        background-color:$hover-primary;
+    }
+}
+.btn-secondary{
+    background-color: $color-light-secondary;
+    color: $color-black;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: inherit;
+    transition: all .3s ease;
+    &:hover{
+        background-color:$color-white;
+    }
+}
